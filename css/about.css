@@ -1,0 +1,493 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    scroll-behavior: smooth;
+}
+
+/* navbar */
+nav {
+    position: fixed;
+    z-index: 100;
+    background-color: black;
+    width: 100%;
+}
+
+.logo {
+    width: 100px;
+    display: inline;
+}
+
+#logo-img {
+    width: 100px;
+}
+
+.menus {
+    display: inline;
+    right: 0;
+    position: absolute;
+    transition: all ease-in-out .4s;
+}
+
+.menus>ul>li {
+    float: left;
+    margin: 0px 10px;
+    padding: 23px 19px;
+}
+
+.hamburger {
+    display: none;
+    margin: 0px 10px;
+    color: white;
+    padding: 23px 19px;
+}
+
+.close {
+    display: none;
+    margin: 0px 10px;
+    padding: 23px 19px;
+}
+
+.menus>ul>li>a {
+    text-decoration: none;
+    color: white;
+}
+
+.menus>ul {
+    list-style-type: none;
+}
+
+#navbar-contact {
+    padding: 16px 19px;
+}
+
+
+/* #hero-section */
+
+#hero-section-container {
+    height: 450px;
+    width: 100%;
+}
+
+#hero-section-img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    position: absolute;
+}
+
+.services-content {
+    width: 100%;
+    height: 100%;
+}
+
+#hero-section-container::before {
+    content: "";
+    width: 100%;
+    height: 450px;
+    top: 0;
+    left: 0;
+    display: block;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.497) center center/cover;
+    z-index: 1
+}
+
+.hero-heading {
+    color: white;
+    font-size: 5rem;
+    font-family: urbanist, sans-serif;
+    z-index: 2;
+}
+
+/* parallax-section */
+
+
+.hero {
+    position: relative;
+    min-height: 600px;
+    /* background-image: url('/img/about-parallax-1.jpg'); */
+    background-color: orange;
+    /* Replace with your image */
+    background-size: cover;
+    background-attachment: fixed;
+    /* Parallax effect */
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.hero2 {
+    position: relative;
+    min-height: 600px;
+    /* background-image: url('/img/nasa-Q1p7bh3SHj8-unsplash.jpg'); */
+    background: orange;
+    /* Replace with your image */
+    background-size: cover;
+    background-attachment: fixed;
+    /* Parallax effect */
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.hero-content>p {
+    width: 60%;
+}
+
+.main-robot {
+    width: 60px;
+}
+
+.hero-content .btn {
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: solid white;
+}
+
+.hero-content .btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.hero::before {
+    /* content: ''; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Dark overlay to improve text readability */
+    z-index: 1;
+}
+
+.parallex1-heading {
+    width: 50%;
+    font: small;
+}
+
+
+/* Styles for the small images on the left and right */
+.small-image {
+    position: absolute;
+    width: 200px;
+    /* Set the width of the small image */
+    height: 200px;
+    /* Set the height of the small image */
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1;
+    /* These images are behind the text but above the background */
+}
+
+.left-image {
+    background-image: url('/img/about-robot1.png');
+    width: 150px;
+
+    /* Replace with your left small image */
+    top: 70%;
+    /* Center vertically */
+    left: 8%;
+    /* Place on the left side */
+    transform: rotate(-30deg);
+    /* scale: 2; */
+}
+
+.right-image {
+    background-image: url('/img/about-robot2.png');
+    /* Replace with your right small image */
+    top: 20%;
+    /* Center vertically */
+    right: 10%;
+    /* Place on the right side */
+    transform: translateY(-50%);
+    /*Centering */
+    transform: rotate(30deg);
+    /* scale: 1.3; */
+}
+
+/* process-section */
+.process-item {
+    background-color: orange;
+    color: white;
+    /* margin: 10px 0px; */
+    border-radius: 200px;
+    box-shadow: 10px 10px 10px grey;
+}
+
+.process-icon {
+    width: 150px;
+    height: 150px;
+}
+
+svg {
+    width: 40% !important;
+}
+
+lord-icon {
+    width: 30px;
+}
+
+/* counter-section */
+container {
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+header h1 {
+    font-size: 60px;
+}
+
+.counters {
+    background: #0f479a;
+    color: #fff;
+    padding: 40px 20px;
+    border-top: 3px lightskyblue solid;
+}
+
+.counters .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    text-align: center;
+}
+
+.counters i {
+    color: lightskyblue;
+    margin-bottom: 5px;
+}
+
+.counters .counter {
+    font-size: 45px;
+    margin: 10px 0;
+}
+
+@media (max-width: 700px) {
+    .counters .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .counters .container>div:nth-of-type(1),
+    .counters .container>div:nth-of-type(2) {
+        border-bottom: 1px lightskyblue solid;
+        padding-bottom: 20px;
+    }
+}
+
+
+/* company-mission-section */
+/* color: white; */
+.card {
+    /* background: none; */
+    border: none;
+}
+
+.col>.card>.card-body {
+    background: black;
+    color: white;
+}
+
+
+/* footer-section */
+
+#footer-section {
+    position: relative;
+    color: white;
+    /* background: black; */
+    background: url('/img/nasa-Q1p7bh3SHj8-unsplash.jpg') center center/cover;
+}
+
+#footer-section::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: block;
+    position: absolute;
+    background: black center center/cover;
+    opacity: .4;
+    z-index: -1;
+}
+
+.footer-logo {
+    width: 150px;
+}
+
+.footer-link {
+    color: white;
+    text-decoration: none;
+    margin: 0px 15px;
+}
+
+
+/* #scroll-indicator */
+/* Style for the Scroll Indicator */
+.scroll-indicator {
+    background-color: white;
+    padding: 13px 7px;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 5;
+    border-radius: 10px 0px 0px 10px;
+
+}
+
+.scroll-indicator input[type="radio"] {
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: orange;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.scroll-indicator input[type="radio"]:checked {
+    border-color: black;
+    /* Active color for checked radio button */
+    background-color: black;
+    /* Active color for checked radio button */
+}
+
+/* Basic section styling */
+/* section {
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+  } */
+
+
+
+@media screen and (max-width:1000px) {
+    .menus {
+        display: hidden;
+        background-color: black;
+        display: hidden;
+        margin-right: -100%;
+    }
+
+    .menus>ul>li {
+        float: unset;
+        margin: 0px 10px;
+        padding: 10px 19px;
+    }
+
+    .hamburger {
+        display: inline;
+        right: 0;
+        position: absolute;
+        z-index: 6;
+        color: white;
+    }
+
+    .logo {
+        display: block;
+    }
+
+}
+
+@media screen and (max-width:813px) {
+    .robots-container {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 200px;
+    }
+
+    .hero {
+        display: block;
+    }
+}
+
+
+@media screen and (max-width:767px) {
+    .process-item {
+        border-radius: 0px;
+    }
+
+    .process-icon {
+        width: 236px;
+        height: 64px;
+    }
+
+}
+
+@media screen and (max-width: 746px) {
+    .hero-heading {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .counters .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .counters .container>div:nth-of-type(1),
+    .counters .container>div:nth-of-type(2) {
+        border-bottom: 1px lightskyblue solid;
+        padding-bottom: 20px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .footer-section-container>a>p {
+        margin: 3px 0px;
+    }
+
+    .footer-section-container>p {
+        margin: 0px;
+    }
+
+    .footer-sections-heading {
+        margin-top: 1.2rem !important;
+    }
+}
+
+@media screen and (max-width:467px) {
+    .hero-content>p {
+        width: 90%;
+    }
+
+    .small-image {
+        width: 150px;
+        height: 150px;
+    }
+}
